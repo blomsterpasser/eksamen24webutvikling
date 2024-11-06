@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Hopp til innhold</a> 
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
+                <li><a href="index.html#kontakt">Kontakt oss</a></li>
+            </ul>
+            <a href="index.html"><img src="images/nettbutikk-logo.png" alt="Logo" class="icon"></a>
+            <a href="checkout.html"><img src="images/cart-icon.png" alt="Handlekurv" class="icon"></a>
+        </nav>
+        <form>
+            <input type="text" placeholder="Søk..." aria-label="Søk">
+            <button type="submit" class="search">Søk</button>
+        </form>
+    </header>
+
+    <main id="main-content">
+        <h1>Kasse</h1>
+        <section>
+            <h2>Shoppingbagen din</h2>
+            <article itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 1</h3>
+                <p>Farge: <span itemprop="color">Rød</span></p>
+                <p>Størrelse: Medium</p>
+                <p>Antall: 1</p>
+            </article>
+            
+        </section>
+
+        <section class="personopplysninger">
+            <h2>Personopplysninger</h2>
+            <form>
+                <label for="fornavn">Fornavn:</label>
+                <input type="text" id="fornavn" name="fornavn" required aria-required="true">
+                <label for="etternavn">Etternavn:</label>
+                <input type="text" id="etternavn" name="etternavn" required aria-required="true">
+                <label for="adresse">Gateadresse:</label>
+                <input type="text" id="adresse" name="adresse" required aria-required="true">
+                <label for="postnummer">Postnummer:</label>
+                <input type="text" id="postnummer" name="postnummer" pattern="\d{4}" title="Postnummer må være 4 siffer" required aria-required="true">
+                <label for="poststed">Poststed:</label>
+                <input type="text" id="poststed" name="poststed" required aria-required="true">
+                <label for="epost">E-post:</label>
+                <input type="email" id="epost" name="epost" required aria-required="true">
+                <label for="telefon">Telefonnummer:</label>
+                <input type="tel" id="telefon" name="telefon" pattern="\d{8}" title="Telefonnummer må være 8 siffer" required aria-required="true">
+                <button type="submit">Lagre</button>
+                <button type="reset">Avbryt</button>
+            </form>
+        </section>
+
+        <section class="levering">
+            <h2>Levering</h2>
+            <form>
+                <label>
+                    <input type="radio" name="levering" value="ekspress-hjem" required aria-required="true">
+                    Ekspresslevering hjem
+                    <span class="levering-info">Leveringstid: 1-2 dager, Pris: 99 kr</span>
+                </label>
+                <label>
+                    <input type="radio" name="levering" value="ekspress-utlevering" required aria-required="true">
+                    Ekspress pakke til utleveringssted
+                    <span class="levering-info">Leveringstid: 1-2 dager, Pris: 79 kr</span>
+                </label>
+                <label>
+                    <input type="radio" name="levering" value="standard-hjem" required aria-required="true">
+                    Standard hjemlevering
+                    <span class="levering-info">Leveringstid: 3-5 dager, Pris: 49 kr</span>
+                </label>
+            </form>
+        </section>
+
+        <section class="betaling">
+            <h2>Betaling</h2>
+            <form>
+                <label for="kortnummer">Kortnummer:</label>
+                <input type="text" id="kortnummer" name="kortnummer" pattern="\d{16}" title="Kortnummer må være 16 siffer" required aria-required="true">
+                <br>
+                <label for="utløpsdato">Utløpsdato:</label>
+                <input type="text" id="utløpsdato" name="utløpsdato" pattern="\d{2}/\d{2}" title="Utløpsdato må være i formatet MM/ÅÅ" required aria-required="true">
+                <br>
+                <label for="cvc">CVC/CVV:</label>
+                <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required aria-required="true">
+               
+                <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                <label>
+                    <input type="checkbox" name="vilkår" required aria-required="true">
+                    Ja, jeg godtar vilkårene
+                </label>
+                <label>
+                    <input type="checkbox" name="nyhetsbrev">
+                    Ja takk! Send nyhetsbrev til meg
+                </label>
+                 <button type="submit">Fullfør kjøp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <img src="images/nettbutikk-logo.png" alt="Logo">
+            <p>Vår nettbutikk - Kvalitet og service</p>
+        </section>
+        <section id="kontakt">
+            <h3>Kontakt</h3>
+            <p>Adresse: Eksempelgate 1, 1234 Oslo</p>
+            <p>Telefon: 123 45 678</p>
+            <p>E-post: kontakt@nettbutikk.no</p>
+        </section>
+        <section>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
+                <li><a href="index.html#kontakt">Kontakt oss</a></li>
+                <li><a href="tilgjengelighetserklaering.pdf">Tilgjengelighetserklaering</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sosiale medier</h3>
+            <ul>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://www.pinterest.com">Pinterest</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <a href="#top" class="hopp-til-toppen" aria-label="Hopp til toppen">↑</a>
+
+</body>
+</html>

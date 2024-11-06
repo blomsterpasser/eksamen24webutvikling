@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Hopp til innhold</a> 
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
+                <li><a href="index.html#kontakt">Kontakt oss</a></li>
+            </ul>
+            <a href="index.html"><img src="images/nettbutikk-logo.png" alt="Logo"></a>
+            <a href="checkout.html"><img src="images/cart-icon.png" alt="Handlekurv"></a>
+        </nav>
+        <form>
+            <input type="text" placeholder="Søk..." aria-label="Søk">
+            <button type="submit" class="search">Søk</button>
+        </form>
+    </header>
+
+    <main id="main-content">
+        <nav aria-label="breadcrumb">
+            <ol>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#kategori">Kategori</a></li>
+                <li>Produktnavn</li>
+            </ol>
+        </nav>
+
+        <section class="product-images">
+            <img src="https://picsum.photos/400" alt="Produktbilde stort" class="main-image">
+            <img src="https://picsum.photos/100" alt="Produktbilde lite" class="thumbnail">
+            <img src="https://picsum.photos/100" alt="Produktbilde lite" class="thumbnail">
+            <img src="https://picsum.photos/100" alt="Produktbilde lite" class="thumbnail">
+        </section>
+
+        <section class="product-details" itemscope itemtype="https://schema.org/Product">
+            <h1 itemprop="name">Produktnavn</h1>
+            <a href="#merke" itemprop="brand">MERKENAVN</a>
+            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="NOK">NOK</span>
+                <span itemprop="price" content="5195">5 195</span> kr inkl. mva.
+            </p>
+            <p>Farge: <span itemprop="color">beige</span></p>
+            <label for="størrelse">Størrelse:</label>
+            <select id="størrelse" name="størrelse" aria-label="Velg størrelse">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <button>Legg i handlekurv</button>
+            <button class="favorite">♥ Favoritt</button>
+            <details>
+                <summary>Materiale og vedlikehold</summary>
+                <p>Materialer: 100% bomull</p>
+                <p>Vedlikehold: Maskinvask 30 grader</p>
+            </details>
+            <details>
+                <summary>Produktdetaljer</summary>
+                <p>Dette produktet er laget av høykvalitetsmaterialer og er designet for å vare.</p>
+            </details>
+            <details>
+                <summary>Størrelsestabell</summary>
+                <table>
+                    <tr>
+                        <th>Størrelse</th>
+                        <th>Brystvidde</th>
+                        <th>Livvidde</th>
+                        <th>Hoftevidde</th>
+                    </tr>
+                    <tr>
+                        <td>Small</td>
+                        <td>86 cm</td>
+                        <td>74 cm</td>
+                        <td>90 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>92 cm</td>
+                        <td>80 cm</td>
+                        <td>96 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Large</td>
+                        <td>98 cm</td>
+                        <td>86 cm</td>
+                        <td>102 cm</td>
+                    </tr>
+                </table>
+            </details>
+            <details>
+                <summary>Anmeldelser</summary>
+                <article itemscope itemtype="https://schema.org/Review">
+                    <h3 itemprop="author">Robert Leflandar</h3>
+                    <p itemprop="reviewBody">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
+                    <span class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="4">
+                        ★★★★☆
+                    </span>
+                </article>
+            </details>
+        </section>
+
+        <aside>
+            <h2>Lignende produkter</h2>
+            <article itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 1</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="5195">5 195</span> kr inkl. mva.
+                </p>
+                <span class="rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="4">
+                    ★★★★☆
+                </span>
+                <span>(123 anmeldelser)</span>
+            </article>
+            <!-- Gjenta for flere lignende produkter -->
+            <a href="#se-flere-lignende-produkter" class="see-more">Se flere lignende produkter →</a>
+        </aside>
+    </main>
+
+    <footer>
+        <section>
+            <img src="images/nettbutikk-logo.png" alt="Logo">
+            <p>Vår nettbutikk - Kvalitet og service</p>
+        </section>
+        <section id="kontakt">
+            <h3>Kontakt</h3>
+            <p>Adresse: Høgskoleveien 99, 1234 Halden</p>
+            <p>Telefon: 123 45 678</p>
+            <p>E-post: kontakt@nettbutikk.no</p>
+        </section>
+        <section>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
+                <li><a href="tilgjengelighetserklaering.pdf">Tilgjengelighetserklaering</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sosiale medier</h3>
+            <ul>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://www.pinterest.com">Pinterest</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <a href="#top" class="hopp-til-toppen" aria-label="Hopp til toppen">↑</a>
+
+</body>
+</html>

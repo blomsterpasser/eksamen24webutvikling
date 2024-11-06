@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettbutikk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Hopp til innhold</a> 
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#produkter">Produkter</a></li>
+                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
+            </ul>
+            <a href="index.html"><img src="images/nettbutikk-logo.png" alt="Logo" class="icon"></a>
+            <a href="checkout.html"><img src="images/cart-icon.png" alt="Handlekurv" class="icon"> </a>
+        </nav>
+        <form>
+            <input type="text" placeholder="Søk..." aria-label="Søk">
+            <button type="submit" class="search">Søk</button>
+        </form>
+    </header>
+
+    <main id="main-content">
+        <section id="banner">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://picsum.photos/1200/300?image=1" alt="Slide 1">
+                    <img src="https://picsum.photos/1200/300?image=2" alt="Slide 2">
+                    <img src="https://picsum.photos/1200/300?image=3" alt="Slide 3">
+                </div>
+            </div>
+            <a href="#produkter">Se våre produkter</a>
+        </section>
+
+        <section id="produkter" itemscope itemtype="https://schema.org/Product">
+            <h2>Våre mest populære produkter</h2>
+            <p>Utforsk våre bestselgere</p>
+            <button>Filter 1</button>
+            <button>Filter 2</button>
+            <button>Filter 3</button>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 1</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="349">349</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★★★☆☆</span>
+                <span>(123 anmeldelser)</span>
+            </article>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 2</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="95">95</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★★☆☆☆</span>
+                <span>(903 anmeldelser)</span>
+            </article>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 3</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="420">420</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★★★★★</span>
+                <span>(420 anmeldelser)</span>
+            </article>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 4</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="849">849</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★★★★★</span>
+                <span>(69 anmeldelser)</span>
+            </article>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 5</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="299">299</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★★★☆☆</span>
+                <span>(23 anmeldelser)</span>
+            </article>
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
+                <h3 itemprop="name">Produktnavn 6</h3>
+                <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK">NOK</span>
+                    <span itemprop="price" content="79">79</span> kr inkl. mva.
+                </p>
+                <label for="størrelse1">Størrelse:</label>
+                <select id="størrelse1" name="størrelse" aria-label="Velg størrelse">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <button>Legg i handlekurv</button>
+                <span class="rating">★☆☆☆☆</span>
+                <span>(154 anmeldelser)</span>
+            </article>
+        </section>
+
+        <section id="kategorier">
+            <h2>Våre mest populære kategorier</h2>
+            <p>Utforsk våre kategorier</p>
+            <article>
+                <h3>Kategori 1</h3>
+            </article>
+            <article>
+                <h3>Kategori 2</h3>
+            </article>
+            <article>
+                <h3>Kategori 3</h3>
+            </article>
+            <article>
+                <h3>Kategori 4</h3>
+            </article>
+            <article>
+                <h3>Kategori 5</h3>
+            </article>
+        </section>
+
+        <section id="anmeldelser">
+            <h2>Anmeldelser</h2>
+            <article itemscope itemtype="https://schema.org/Review">
+                <img src="https://picsum.photos/150" alt="Anmelderbilde" itemprop="image">
+                <h3 itemprop="author">Anmeldernavn 1</h3>
+                <p itemprop="reviewBody">Lorem ipsum dolor sit amet...</p>
+                <span class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="4">
+                    ★★★★☆
+                </span>
+            </article>
+            <article itemscope itemtype="https://schema.org/Review">
+                <img src="https://picsum.photos/150" alt="Anmelderbilde" itemprop="image">
+                <h3 itemprop="author">Anmeldernavn 2</h3>
+                <p itemprop="reviewBody">Lorem ipsum dolor sit amet...</p>
+                <span class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </span>
+            </article>
+            <article itemscope itemtype="https://schema.org/Review">
+                <img src="https://picsum.photos/150" alt="Anmelderbilde" itemprop="image">
+                <h3 itemprop="author">Anmeldernavn 3</h3>
+                <p itemprop="reviewBody">Lorem ipsum dolor sit amet...</p>
+                <span class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="4">
+                    ★★★★☆
+                </span>
+            </article>
+            <article itemscope itemtype="https://schema.org/Review">
+                <img src="https://picsum.photos/150" alt="Anmelderbilde" itemprop="image">
+                <h3 itemprop="author">Anmeldernavn 4</h3>
+                <p itemprop="reviewBody">Lorem ipsum dolor sit amet...</p>
+                <span class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </span>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <img src="images/nettbutikk-logo.png" alt="Logo">
+            <p>Vår nettbutikk - Kvalitet og service</p>
+        </section>
+        <section id="kontakt">
+            <h3>Kontakt</h3>
+            <p>Adresse: Høgskoleveien 99, 1234 Halden</p>
+            <p>Telefon: 123 45 678</p>
+            <p>E-post: kontakt@nettbutikk.no</p>
+        </section>
+        <section>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#produkter">Produkter</a></li>
+                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
+                <li><a href="tilgjengelighetserklaering.pdf">Tilgjengelighetserklaering</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sosiale medier</h3>
+            <ul>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://www.pinterest.com">Pinterest</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <a href="#top" class="hopp-til-toppen" aria-label="Hopp til toppen">↑</a>
+
+</body>
+</html>
