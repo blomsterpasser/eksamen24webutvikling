@@ -36,27 +36,27 @@
                 <p>Farge: <span itemprop="color">Rød</span></p>
                 <p>Størrelse: Medium</p>
                 <p>Antall: 1</p>
+                <p>Totalpris: <strong>1 199 kr inkl. mva.</strong></p>
             </article>
-            
         </section>
 
         <section class="personopplysninger">
             <h2>Personopplysninger</h2>
             <form>
                 <label for="fornavn">Fornavn:</label>
-                <input type="text" id="fornavn" name="fornavn" required aria-required="true">
+                <input type="text" id="fornavn" name="fornavn" required aria-required="true" placeholder="Ola">
                 <label for="etternavn">Etternavn:</label>
-                <input type="text" id="etternavn" name="etternavn" required aria-required="true">
+                <input type="text" id="etternavn" name="etternavn" required aria-required="true" placeholder="Nordmann">
                 <label for="adresse">Gateadresse:</label>
-                <input type="text" id="adresse" name="adresse" required aria-required="true">
+                <input type="text" id="adresse" name="adresse" required aria-required="true" placeholder="Haldenveien 123">
                 <label for="postnummer">Postnummer:</label>
-                <input type="text" id="postnummer" name="postnummer" pattern="\d{4}" title="Postnummer må være 4 siffer" required aria-required="true">
+                <input type="text" id="postnummer" name="postnummer" pattern="\d{4}" title="Postnummer må være 4 siffer" required aria-required="true" placeholder="6969">
                 <label for="poststed">Poststed:</label>
-                <input type="text" id="poststed" name="poststed" required aria-required="true">
+                <input type="text" id="poststed" name="poststed" required aria-required="true" placeholder="Halden">
                 <label for="epost">E-post:</label>
-                <input type="email" id="epost" name="epost" required aria-required="true">
+                <input type="email" id="epost" name="epost" required aria-required="true"placeholder="olan@hiof.no">
                 <label for="telefon">Telefonnummer:</label>
-                <input type="tel" id="telefon" name="telefon" pattern="\d{8}" title="Telefonnummer må være 8 siffer" required aria-required="true">
+                <input type="tel" id="telefon" name="telefon" pattern="\d{8}" title="Telefonnummer må være 8 siffer" required aria-required="true" placeholder="123 45 678">
                 <button type="submit">Lagre</button>
                 <button type="reset">Avbryt</button>
             </form>
@@ -68,17 +68,17 @@
                 <label>
                     <input type="radio" name="levering" value="ekspress-hjem" required aria-required="true">
                     Ekspresslevering hjem
-                    <span class="levering-info">Leveringstid: 1-2 dager, Pris: 99 kr</span>
+                    <span class="levering-info"> Leveringstid: 1-2 dager, Pris: 99 kr</span>
                 </label>
                 <label>
                     <input type="radio" name="levering" value="ekspress-utlevering" required aria-required="true">
                     Ekspress pakke til utleveringssted
-                    <span class="levering-info">Leveringstid: 1-2 dager, Pris: 79 kr</span>
+                    <span class="levering-info"> Leveringstid: 1-2 dager, Pris: 79 kr</span>
                 </label>
                 <label>
                     <input type="radio" name="levering" value="standard-hjem" required aria-required="true">
                     Standard hjemlevering
-                    <span class="levering-info">Leveringstid: 3-5 dager, Pris: 49 kr</span>
+                    <span class="levering-info"> Leveringstid: 3-5 dager, Pris: 49 kr</span>
                 </label>
             </form>
         </section>
@@ -87,13 +87,13 @@
             <h2>Betaling</h2>
             <form>
                 <label for="kortnummer">Kortnummer:</label>
-                <input type="text" id="kortnummer" name="kortnummer" pattern="\d{16}" title="Kortnummer må være 16 siffer" required aria-required="true">
+                <input type="text" id="kortnummer" name="kortnummer" pattern="\d{16}" title="Kortnummer må være 16 siffer" required aria-required="true" placeholder="342342****4435">
                 <br>
                 <label for="utløpsdato">Utløpsdato:</label>
-                <input type="text" id="utløpsdato" name="utløpsdato" pattern="\d{2}/\d{2}" title="Utløpsdato må være i formatet MM/ÅÅ" required aria-required="true">
+                <input type="text" id="utløpsdato" name="utløpsdato" pattern="\d{2}/\d{2}" title="Utløpsdato må være i formatet MM/ÅÅ" required aria-required="true" placeholder="11/24">
                 <br>
                 <label for="cvc">CVC/CVV:</label>
-                <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required aria-required="true">
+                <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required aria-required="true" placeholder="CVC/CVV">
                
                 <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
                 <label>
@@ -116,7 +116,7 @@
         </section>
         <section id="kontakt">
             <h3>Kontakt</h3>
-            <p>Adresse: Eksempelgate 1, 1234 Oslo</p>
+            <p>Adresse: Høgskoleveien 99, 1234 Halden</p>
             <p>Telefon: 123 45 678</p>
             <p>E-post: kontakt@nettbutikk.no</p>
         </section>
@@ -124,9 +124,9 @@
             <h3>Snarveier</h3>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="index.html#produkter">Produkter</a></li>
-                <li><a href="index.html#kategorier">Kategorier</a></li>
-                <li><a href="index.html#kontakt">Kontakt oss</a></li>
+                <li><a href="#produkter">Produkter</a></li>
+                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
                 <li><a href="tilgjengelighetserklaering.pdf">Tilgjengelighetserklaering</a></li>
             </ul>
         </section>

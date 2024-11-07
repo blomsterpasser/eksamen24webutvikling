@@ -3,30 +3,199 @@ body {
     margin: 0;
     padding: 0;
 }
-
-header, nav, main, section, article, aside, footer {
-    padding: 1rem;
+header, main, footer {
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 8px;
 }
-
-header {
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
 }
-
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
+    margin-right: 10px;
 }
-
 nav a {
     text-decoration: none;
     color: #333;
+}
+#produkter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#produkter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#produkter p {
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 20px; /* Mellomrom mellom produkter */
+}
+
+.product-grid article {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-grid article img {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid article h3 {
+    margin: 10px 0;
+}
+
+.product-grid article p {
+    color: #555;
+}
+
+.product-grid .rating {
+    color: #f80;
+    font-size: 1em;
+}
+
+
+@media (max-width: 768px) {
+    .article {
+        flex: 1 1 100%; /* På små skjermer tar hver artikkel full bredde */
+    }
+}
+.product-images img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+.product-details {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+.product-details h1 {
+    color: #333;
+}
+.details {
+    margin-top: 20px;
+}
+.details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+.details p, .details table {
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.reviews, .similar-products {
+    margin-top: 20px;
+}
+.review, .similar-product {
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.details {
+    display: block;
+    overflow: hidden;
+}
+.details[open] summary ~ * {
+    animation: smooth 0.5s ease-in-out;
+}
+@keyframes smooth {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.category-item {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    margin: 10px;
+}
+.category-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.category-item figcaption {
+    position: absolute;
+    bottom: 10px; /* Juster dette etter behov */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Delvis gjennomsiktig svart bakgrunn */
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+#anmeldelser {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9; /* Lys bakgrunnsfarge for å skille seksjonen fra andre deler */
+}
+
+#anmeldelser h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#anmeldelser p {
+    margin-bottom: 20px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 20px; /* Mellomrom mellom anmeldelser */
+}
+
+.review-grid article {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.review-grid article img {
+    width: 20%; /* Full bredde for å matche bildene i produktseksjonen */
+    height: auto;
+    margin-bottom: 10px; /* Plass under bildet */
+}
+
+.review-grid article h3 {
+    margin: 5px 0;
+    color: #333; /* Mørkere tekstfarge for bedre lesbarhet */
+}
+
+.review-grid article p {
+    color: #555;
+    font-size: 0.9em; /* Litt mindre tekststørrelse for detaljer */
+}
+
+.review-grid .rating {
+    color: #f80; /* Oransje farge for stjerner */
+    font-size: 1.2em; /* Større skriftstørrelse for rating */
+    margin-bottom: 5px; /* Plass under rating før anmeldelsestekst */
 }
 
 form {
@@ -34,14 +203,12 @@ form {
     justify-content: center;
     margin-top: 1rem;
 }
-
 form input {
     padding: 0.3rem;
     border: 1px solid #ddd;
     border-radius: 4px 0 0 4px;
     width: 200px;
 }
-
 .search {
     padding: 10px;
     border: 1px solid #ddd;
@@ -49,16 +216,12 @@ form input {
     width: 100px; 
     margin-right: 1550px;
 }
-
-
-
 form button {
     width: 100%;
     padding: 0.3rem;
     border: 1px solid #ddd;
     text-align: right;
 }
-
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -66,95 +229,75 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 section {
     margin: 2rem 0;
 }
-
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
-
 form label {
     grid-column: span 1;
 }
-
 form input, form select, form button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
-
-
 form button {
     background-color: #333;
     color: #fff;
     cursor: pointer;
 }
-
 form button[type="reset"] {
     background-color: #f8f8f8;
     color: #333;
     border: 1px solid #ddd;
 }
-
 .levering-info {
     display: block;
     font-size: 0.8rem;
     color: #666;
 }
-
 section.levering form {
     display: flex;
     flex-direction: column;
 }
-
 section.levering label {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
-
 section.levering input[type="radio"] {
     margin-right: 0.5rem;
 }
-
 section.betaling form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
-
 section.betaling label {
     grid-column: span 1;
 }
-
 section.betaling input {
     grid-column: span 1;
 }
-
 section.betaling button {
     grid-column: span 3;
 }
-
 section.betaling p {
     grid-column: span 3;
     font-size: 0.9rem;
 }
-
 section.betaling label[for="vilkår"], section.betaling label[for="nyhetsbrev"] {
     grid-column: span 3;
     display: flex;
     align-items: center;
 }
-
 section.betaling input[type="checkbox"] {
     margin-right: 0.5rem;
 }
-
-
 .icon {
     width: 50px; 
     height: 50px; 
@@ -163,8 +306,6 @@ section.betaling input[type="checkbox"] {
     max-height: 100%; 
     display: inline-block; 
 }
-
-
 .skip-to-content {
     position: absolute;
     top: -40px;
@@ -174,17 +315,12 @@ section.betaling input[type="checkbox"] {
     padding: 8px;
     z-index: 100;
 }
-
 .skip-to-content:focus {
     top: 0;
 }
-
-
 a:hover, button:hover {
     opacity: 0.8;
 }
-
-
 .hopp-til-toppen {
     position: fixed;
     bottom: 20px;
@@ -197,18 +333,15 @@ a:hover, button:hover {
     text-decoration: none;
     display: none;
 }
-
 .slides {
     display: flex;
     width: 100%; 
     animation: slide 9s infinite;
 }
-
 .slides img {
     width: 100%;
     flex-shrink: 0;
 }
-
 @keyframes slide {
     0% { transform: translateX(0%); }
     33% { transform: translateX(0%); }
@@ -217,13 +350,11 @@ a:hover, button:hover {
     76% { transform: translateX(-200%); }
     100% { transform: translateX(-200%); }
 }
-
 @media (max-width: 768px) {
     .slider {
         display: none; 
     }
 }
-
 footer {
     background-color: #f8f8f8;
     border-top: 1px solid #ddd;
@@ -231,46 +362,36 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 footer section {
     flex: 1;
     margin: 1rem;
 }
-
 footer section:first-of-type {
     flex: 1 1 100%;
     text-align: center;
 }
-
 footer section:nth-of-type(2), footer section:nth-of-type(3), footer section:nth-of-type(4) {
     flex: 1;
     text-align: left;
 }
-
 footer ul {
     list-style: none;
     padding: 0;
 }
-
 footer ul li {
     margin: 0.5rem 0;
 }
-
 footer a {
     text-decoration: none;
     color: #333;
 }
-
 footer img {
     max-width: 200px;
     max-height: 150px;
 }
-
-
 .hopp-til-toppen:focus, .hopp-til-toppen:hover {
     background-color: #555;
 }
-
 @media (min-width: 768px) {
     .hopp-til-toppen {
         display: block;
