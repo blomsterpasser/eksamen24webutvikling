@@ -1,26 +1,43 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #d4d0d0; /* Mild grå som grunnfarge */
+    color: #333; /* Mørk grå for tekst, gir god lesbarhet */
+    font-family: Arial, sans-serif; /* Moderne, lettleselig skrifttype */
 }
-header, main, footer {
+
+header {
+    background-color: #f8f8f8;
+
+    border-radius: 8px; /* Legger til runde hjørner */
     padding: 20px;
-    background: white;
+    box-shadow: 1 rgba(0, 0, 0, 0.1); /* Subtil skygge for å løfte headeren */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Sentrerer innholdet horisontalt */
+}
+main, footer, section {
     margin: 10px;
     border-radius: 8px;
+   
+}
+nav {
+    width: 100%;
+    text-align: center;
 }
 nav ul {
     list-style: none;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
     margin-right: 10px;
 }
+
 nav a {
     text-decoration: none;
     color: #333;
 }
+
 #produkter {
     text-align: center;
     margin-top: 20px;
@@ -65,77 +82,104 @@ nav a {
     font-size: 1em;
 }
 
-
 @media (max-width: 768px) {
     .article {
         flex: 1 1 100%; /* På små skjermer tar hver artikkel full bredde */
     }
 }
+
+.product-images {
+    text-align: left; /* Sentrerer bildene */
+    margin-top: 0px;
+}
+
+.main-image {
+    width: 100%; /* Gjør hovedbildet responsivt */
+    max-width: 600px; /* Setter maksimal bredde for hovedbildet */
+    height: auto; /* Bevarer proporsjoner */
+    display: flex; /* Sørger for at bildet vises som en blokk */
+    margin: 0 auto 20px; /* Sentrerer bildet og legger til margin under */
+}
+
+.thumbnail {
+    width: 160px; /* Setter fast bredde for thumbnails */
+    height: auto; /* Bevarer proporsjoner */
+    display: inline-block; /* Viser thumbnails på samme linje */
+    margin: 0 10px; /* Legger til margin mellom thumbnails */
+}
+
+.thumbnail img {
+    width: 160px; /* Setter maksimal bredde for thumbnails */
+    height: auto; /* Bevarer proporsjoner */
+}
+
 .product-images img {
     width: 100%;
     max-width: 300px;
     margin: 10px;
 }
+
 .product-details {
     background: #fff;
-    padding: 20px;
     margin-top: 20px;
+    padding: 1%;
 }
+
 .product-details h1 {
     color: #333;
 }
+
 .details {
     margin-top: 20px;
+    display: block;
+    overflow: hidden; /* Hindrer innholdet i å flyte utenfor */
 }
+
 .details summary {
     font-weight: bold;
     cursor: pointer;
 }
+
 .details p, .details table {
-    padding: 10px;
     background: #f9f9f9;
     border: 1px solid #ddd;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     text-align: left;
-    padding: 8px;
     border-bottom: 1px solid #ddd;
 }
-.reviews, .similar-products {
-    margin-top: 20px;
+details {
+    margin-bottom: 10px; /* Gir litt plass mellom hver detaljseksjon */
 }
-.review, .similar-product {
-    background: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-.details {
-    display: block;
-    overflow: hidden;
-}
-.details[open] summary ~ * {
-    animation: smooth 0.5s ease-in-out;
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px; /* Litt plass under overskriften */
 }
 @keyframes smooth {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .category-item {
     display: inline-block;
     position: relative;
     width: 200px;
     margin: 10px;
 }
+
 .category-item img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .category-item figcaption {
     position: absolute;
     bottom: 10px; /* Juster dette etter behov */
@@ -144,14 +188,13 @@ th, td {
     background-color: rgba(0, 0, 0, 0.5); /* Delvis gjennomsiktig svart bakgrunn */
     color: white;
     text-align: center;
-    padding: 5px 0;
     font-size: 16px;
     font-weight: bold;
 }
+
 #anmeldelser {
     text-align: center;
     margin-top: 10px;
-    padding: 10px;
     background: #f9f9f9; /* Lys bakgrunnsfarge for å skille seksjonen fra andre deler */
 }
 
@@ -162,6 +205,33 @@ th, td {
 
 #anmeldelser p {
     margin-bottom: 20px;
+}
+
+.reviews, .similar-products {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Lys bakgrunn for å skille anmeldelsene fra resten av innholdet */
+}
+
+.review, .similar-product {
+    background: #f8e4e4;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+.review-image {
+    float: left; /* Plasserer bildet til venstre for teksten */
+    margin-right: 10px; /* Gir litt plass mellom bildet og teksten */
+    width: 50px; /* Fast størrelse for profilbildene */
+    height: 50px; /* Fast størrelse for profilbildene */
+    border-radius: 50%; /* Gjør bildene sirkulære */
+}
+
+.review p {
+    margin: 0; /* Fjerner standardmarg */
+    padding-top: 5px; /* Litt plass på toppen av hver paragraf */
 }
 
 .review-grid {
@@ -200,28 +270,32 @@ th, td {
 
 form {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Sentrerer søkefeltet horisontalt */
     margin-top: 1rem;
 }
+
 form input {
     padding: 0.3rem;
     border: 1px solid #ddd;
     border-radius: 4px 0 0 4px;
     width: 200px;
 }
+
+form button {
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 0 4px 4px 0;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
 .search {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 100px; 
-    margin-right: 1550px;
+    width: 100px;  
 }
-form button {
-    width: 100%;
-    padding: 0.3rem;
-    border: 1px solid #ddd;
-    text-align: right;
-}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -229,75 +303,86 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-section {
-    margin: 2rem 0;
-}
+
+
+
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+
 form label {
     grid-column: span 1;
 }
+
 form input, form select, form button {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+
 form button {
     background-color: #333;
     color: #fff;
     cursor: pointer;
 }
+
 form button[type="reset"] {
     background-color: #f8f8f8;
     color: #333;
     border: 1px solid #ddd;
 }
+
 .levering-info {
     display: block;
     font-size: 0.8rem;
     color: #666;
 }
+
 section.levering form {
     display: flex;
     flex-direction: column;
 }
+
 section.levering label {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
+
 section.levering input[type="radio"] {
     margin-right: 0.5rem;
 }
+
 section.betaling form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+
 section.betaling label {
     grid-column: span 1;
 }
+
 section.betaling input {
     grid-column: span 1;
 }
-section.betaling button {
-    grid-column: span 3;
-}
+
 section.betaling p {
     grid-column: span 3;
     font-size: 0.9rem;
 }
+
 section.betaling label[for="vilkår"], section.betaling label[for="nyhetsbrev"] {
     grid-column: span 3;
     display: flex;
     align-items: center;
 }
+
 section.betaling input[type="checkbox"] {
     margin-right: 0.5rem;
 }
+
 .icon {
     width: 50px; 
     height: 50px; 
@@ -306,6 +391,7 @@ section.betaling input[type="checkbox"] {
     max-height: 100%; 
     display: inline-block; 
 }
+
 .skip-to-content {
     position: absolute;
     top: -40px;
@@ -315,12 +401,15 @@ section.betaling input[type="checkbox"] {
     padding: 8px;
     z-index: 100;
 }
+
 .skip-to-content:focus {
     top: 0;
 }
+
 a:hover, button:hover {
     opacity: 0.8;
 }
+
 .hopp-til-toppen {
     position: fixed;
     bottom: 20px;
@@ -333,73 +422,58 @@ a:hover, button:hover {
     text-decoration: none;
     display: none;
 }
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
 .slides {
     display: flex;
-    width: 100%; 
-    animation: slide 9s infinite;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
+
+.slides article {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
 .slides img {
     width: 100%;
-    flex-shrink: 0;
+    display: block;
 }
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(0%); }
-    38% { transform: translateX(-100%); }
-    71% { transform: translateX(-100%); }
-    76% { transform: translateX(-200%); }
-    100% { transform: translateX(-200%); }
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Runde knapper */
 }
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
 @media (max-width: 768px) {
     .slider {
         display: none; 
     }
-}
-footer {
-    background-color: #f8f8f8;
-    border-top: 1px solid #ddd;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-footer section {
-    flex: 1;
-    margin: 1rem;
-}
-footer section:first-of-type {
-    flex: 1 1 100%;
-    text-align: center;
-}
-footer section:nth-of-type(2), footer section:nth-of-type(3), footer section:nth-of-type(4) {
-    flex: 1;
-    text-align: left;
-}
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-footer ul li {
-    margin: 0.5rem 0;
-}
-footer a {
-    text-decoration: none;
-    color: #333;
-}
-footer img {
-    max-width: 200px;
-    max-height: 150px;
-}
-.hopp-til-toppen:focus, .hopp-til-toppen:hover {
-    background-color: #555;
-}
-@media (min-width: 768px) {
-    .hopp-til-toppen {
-        display: block;
-    }
-}
 
-/* Mobilvennlig layout */
-@media (max-width: 768px) {
     main {
         flex-direction: column;
         padding: 1rem;
@@ -413,7 +487,48 @@ footer img {
         grid-template-columns: 1fr;
     }
 
-    section.betaling label, section.betaling input, section.betaling button, section.betaling p {
+    section.betaling label, section.betaling input, section.betaling p {
         grid-column: span 1;
+    }
+}
+
+footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer section {
+    flex: 1;
+    margin: 1rem;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer img {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+.hopp-til-toppen:focus, .hopp-til-toppen:hover {
+    background-color: #555;
+}
+
+@media (min-width: 768px) {
+    .hopp-til-toppen {
+        display: block;
     }
 }

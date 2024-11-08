@@ -26,15 +26,24 @@
 
     <main>
         <section class="product-images">
-            <img src="https://picsum.photos/100" alt="Hovedbilde av produkt" class="main-image">
-            <img src="https://picsum.photos/100" alt="Tilleggsbilde 1" class="thumbnail">
-            <img src="https://picsum.photos/100" alt="Tilleggsbilde 2" class="thumbnail">
-            <img src="https://picsum.photos/100" alt="Tilleggsbilde 3" class="thumbnail">
+            <figure>
+                <img src="https://picsum.photos/400" alt="Hovedbilde av produkt" class="main-image">
+            </figure>
+            <figure class="thumbnail">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 1">
+            </figure>
+            <figure class="thumbnail">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 2">
+            </figure>
+            <figure class="thumbnail">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 3">
+            </figure>
         </section>
+        
 
         <section class="product-details">
             <h1>Produktnavn</h1>
-            <p><strong>MERKENAVN</strong> - 699 999 kr inkl. mva.</p>
+            <p>MERKENAVN - 699 999 kr inkl. mva.</p>
             <p>Farge: rød</p>
             <label for="størrelse">Størrelse:</label>
             <select id="størrelse" name="størrelse">
@@ -53,7 +62,7 @@
                 </details>
                 <details>
                     <summary>Produktdetaljer</summary>
-                    <p>Dette produktet her går ikke i stykker, for real for real.</p>
+                    <p>Dette produktet her går ikke i stykker.</p>
                 </details>
                 <details>
                     <summary>Størrelsestabell</summary>
@@ -89,15 +98,18 @@
 
         <section class="reviews">
             <h2>Anmeldelser</h2>
-            <div class="review">
+            <article class="review">
+                <img src="https://picsum.photos/50" alt="Profilbilde av Anmeldernavn 1" class="review-image">
                 <p><strong>Anmeldernavn 1</strong> - ★★★★☆</p>
                 <p>"Veldig fornøyd med kvaliteten!"</p>
-            </div>
-            <div class="review">
+            </article>
+            <article class="review">
+                <img src="https://picsum.photos/50" alt="Profilbilde av Anmeldernavn 2" class="review-image">
                 <p><strong>Anmeldernavn 2</strong> - ★★★★★</p>
                 <p>"Fantastisk produkt, anbefales!"</p>
-            </div>
+            </article>
         </section>
+        
 
         <section class="similar-products">
             <h2>Lignende produkter</h2>
