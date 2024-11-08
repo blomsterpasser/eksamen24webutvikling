@@ -1,17 +1,17 @@
 body {
-    background-color: #d4d0d0; 
-    color: #333; 
-    font-family: Arial, sans-serif; 
+    background-color: #d4d0d0; /* Mild grå som grunnfarge */
+    color: #333; /* Mørk grå for tekst, gir god lesbarhet */
+    font-family: Arial, sans-serif; /* Moderne, lettleselig skrifttype */
 }
 
 header {
     background-color: #f8f8f8;
-    border-radius: 8px; 
+    border-radius: 8px; /* Legger til runde hjørner */
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtil skygge for å løfte headeren */
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center; /* Sentrerer innholdet horisontalt */
 }
 
 main, footer, section {
@@ -55,8 +55,8 @@ nav a {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 20px; /* Mellomrom mellom produkter */
 }
 
 .product-grid article {
@@ -85,33 +85,33 @@ nav a {
 
 @media (max-width: 768px) {
     .article {
-        flex: 1 1 100%; 
+        flex: 1 1 100%; /* På små skjermer tar hver artikkel full bredde */
     }
 }
 
 .product-images {
-    text-align: left; 
+    text-align: left; /* Sentrerer bildene */
     margin-top: 0px;
 }
 
 .main-image {
-    width: 100%; 
-    max-width: 600px;
-    height: auto; 
-    display: flex; 
-    margin: 0 auto 20px; 
+    width: 100%; /* Gjør hovedbildet responsivt */
+    max-width: 600px; /* Setter maksimal bredde for hovedbildet */
+    height: auto; /* Bevarer proporsjoner */
+    display: flex; /* Sørger for at bildet vises som en blokk */
+    margin: 0 auto 20px; /* Sentrerer bildet og legger til margin under */
 }
 
 .thumbnail {
-    width: 160px; 
-    height: auto; 
-    display: inline-block; 
-    margin: 0 10px; 
+    width: 160px; /* Setter fast bredde for thumbnails */
+    height: auto; /* Bevarer proporsjoner */
+    display: inline-block; /* Viser thumbnails på samme linje */
+    margin: 0 10px; /* Legger til margin mellom thumbnails */
 }
 
 .thumbnail img {
-    width: 160px; 
-    height: auto; 
+    width: 160px; /* Setter maksimal bredde for thumbnails */
+    height: auto; /* Bevarer proporsjoner */
 }
 
 .product-images img {
@@ -133,7 +133,7 @@ nav a {
 .details {
     margin-top: 20px;
     display: block;
-    overflow: hidden; 
+    overflow: hidden; /* Hindrer innholdet i å flyte utenfor */
 }
 
 .details summary {
@@ -157,13 +157,13 @@ th, td {
 }
 
 details {
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* Gir litt plass mellom hver detaljseksjon */
 }
 
 summary {
     cursor: pointer;
     font-weight: bold;
-    margin-bottom: 5px; 
+    margin-bottom: 5px; /* Litt plass under overskriften */
 }
 
 @keyframes smooth {
@@ -186,10 +186,10 @@ summary {
 
 .category-item figcaption {
     position: absolute;
-    bottom: 10px; 
+    bottom: 10px; /* Juster dette etter behov */
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* Delvis gjennomsiktig svart bakgrunn */
     color: white;
     text-align: center;
     font-size: 16px;
@@ -199,7 +199,7 @@ summary {
 #anmeldelser {
     text-align: center;
     margin-top: 10px;
-    background: #f9f9f9; 
+    background: #f9f9f9; /* Lys bakgrunnsfarge for å skille seksjonen fra andre deler */
 }
 
 #anmeldelser h2 {
@@ -214,7 +214,7 @@ summary {
 .reviews, .similar-products {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Lys bakgrunn for å skille anmeldelsene fra resten av innholdet */
     height: fit-content;
 }
 
@@ -228,22 +228,22 @@ summary {
 }
 
 .review-image {
-    float: left; 
-    margin-right: 10px; 
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
+    float: left; /* Plasserer bildet til venstre for teksten */
+    margin-right: 10px; /* Gir litt plass mellom bildet og teksten */
+    width: 50px; /* Fast størrelse for profilbildene */
+    height: 50px; /* Fast størrelse for profilbildene */
+    border-radius: 50%; /* Gjør bildene sirkulære */
 }
 
 .review p {
-    margin: 0; 
-    padding-top: 5px; 
+    margin: 0; /* Fjerner standardmarg */
+    padding-top: 5px; /* Litt plass på toppen av hver paragraf */
 }
 
 .review-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 20px; /* Mellomrom mellom anmeldelser */
 }
 
 .review-grid article {
@@ -253,37 +253,37 @@ summary {
 }
 
 .review-grid article img {
-    width: 20%; 
+    width: 20%; /* Full bredde for å matche bildene i produktseksjonen */
     height: auto;
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* Plass under bildet */
 }
 
 .review-grid article h3 {
     margin: 5px 0;
-    color: #333; 
+    color: #333; /* Mørkere tekstfarge for bedre lesbarhet */
 }
 
 .review-grid article p {
     color: #555;
-    font-size: 0.9em; 
+    font-size: 0.9em; /* Litt mindre tekststørrelse for detaljer */
 }
 
 .review-grid .rating {
-    color: #f80; 
-    font-size: 1.2em; 
-    margin-bottom: 5px; 
+    color: #f80; /* Oransje farge for stjerner */
+    font-size: 1.2em; /* Større skriftstørrelse for rating */
+    margin-bottom: 5px; /* Plass under rating før anmeldelsestekst */
 }
 
 form {
     display: flex;
-    justify-content: center; 
+    justify-content: center; /* Sentrerer søkefeltet horisontalt */
     margin-top: 1rem;
 }
 
 form input, form button {
     padding: 0.3rem;
     border: 1px solid #ddd;
-    font-size: 16px; 
+    font-size: 16px; /* Ensartet skriftstørrelse */
 }
 
 form input {
@@ -340,7 +340,7 @@ input#adresse {
 .levering-info {
     display: block;
     font-size: 0.8rem;
-    color: #000000;
+    color: #000000; /* Endret     farge for bedre synlighet */
     padding: 20px;
 }
 
@@ -359,7 +359,7 @@ section.levering label {
 }
 
 section.levering .levering-info {
-    color: #000000; 
+    color: #000000; /* Endret farge for bedre synlighet */
     margin-top: 5px;
 }
 
@@ -485,7 +485,7 @@ button.prev, button.next {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%; 
+    border-radius: 50%; /* Runde knapper */
 }
 
 button.prev {
@@ -561,6 +561,7 @@ footer img {
     }
 }
 
+/* Spesifikke stiler for checkout-siden */
 .personopplysninger form {
     display: grid;
     grid-template-columns: 1fr 1fr;

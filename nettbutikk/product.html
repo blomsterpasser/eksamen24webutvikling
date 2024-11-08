@@ -11,8 +11,8 @@
         <nav>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="#produkter">Produkter</a></li>
-                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
                 <li><a href="#kontakt">Kontakt oss</a></li>
             </ul>
             <a href="index.html"><img src="images/nettbutikk-logo.png" alt="Logo" class="icon"></a>
@@ -25,26 +25,25 @@
     </header>
 
     <main>
-        <section class="product-images">
+        <section class="product-images" itemscope itemtype="https://schema.org/Product">
             <figure>
-                <img src="https://picsum.photos/400" alt="Hovedbilde av produkt" class="main-image">
+                <img src="https://picsum.photos/400" alt="Hovedbilde av produkt" class="main-image" itemprop="image">
             </figure>
             <figure class="thumbnail">
-                <img src="https://picsum.photos/400" alt="Tilleggsbilde 1">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 1" itemprop="image">
             </figure>
             <figure class="thumbnail">
-                <img src="https://picsum.photos/400" alt="Tilleggsbilde 2">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 2" itemprop="image">
             </figure>
             <figure class="thumbnail">
-                <img src="https://picsum.photos/400" alt="Tilleggsbilde 3">
+                <img src="https://picsum.photos/400" alt="Tilleggsbilde 3" itemprop="image">
             </figure>
         </section>
         
-
-        <section class="product-details">
-            <h1>Produktnavn</h1>
-            <p>MERKENAVN - 699 999 kr inkl. mva.</p>
-            <p>Farge: rød</p>
+        <section class="product-details" itemscope itemtype="https://schema.org/Product">
+            <h1 itemprop="name">Produktnavn</h1>
+            <p><span itemprop="brand">MERKENAVN</span> - <span itemprop="priceCurrency" content="NOK">NOK</span> <span itemprop="price" content="699999">699 999 kr inkl. mva.</span></p>
+            <p>Farge: <span itemprop="color">Rød</span></p>
             <label for="størrelse">Størrelse:</label>
             <select id="størrelse" name="størrelse">
                 <option value="small">Small</option>
@@ -57,12 +56,12 @@
             <div class="details">
                 <details>
                     <summary>Materiale og vedlikehold</summary>
-                    <p>Materialer: 99% Bomull rett fra sævven</p>
-                    <p>Vedlikehold: Ikke såååå varmt</p>
+                    <p>Materialer: <span itemprop="material">99% Bomull rett fra sævven</span></p>
+                    <p>Vedlikehold: <span itemprop="careInstructions">Ikke såååå varmt</span></p>
                 </details>
                 <details>
                     <summary>Produktdetaljer</summary>
-                    <p>Dette produktet her går ikke i stykker.</p>
+                    <p itemprop="description">Dette produktet her går ikke i stykker.</p>
                 </details>
                 <details>
                     <summary>Størrelsestabell</summary>
@@ -96,31 +95,30 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" itemscope itemtype="https://schema.org/Review">
             <h2>Anmeldelser</h2>
-            <article class="review">
+            <article class="review" itemprop="review" itemscope itemtype="https://schema.org/Review">
                 <img src="https://picsum.photos/50" alt="Profilbilde av Anmeldernavn 1" class="review-image">
-                <p><strong>Anmeldernavn 1</strong> - ★★★★☆</p>
-                <p>"Veldig fornøyd med kvaliteten!"</p>
+                <p><strong itemprop="author">Anmeldernavn 1</strong> - <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating"><span itemprop="ratingValue">4</span> ★★★★☆</span></p>
+                <p itemprop="reviewBody">"Veldig fornøyd med kvaliteten!"</p>
             </article>
-            <article class="review">
+            <article class="review" itemprop="review" itemscope itemtype="https://schema.org/Review">
                 <img src="https://picsum.photos/50" alt="Profilbilde av Anmeldernavn 2" class="review-image">
-                <p><strong>Anmeldernavn 2</strong> - ★★★★★</p>
-                <p>"Fantastisk produkt, anbefales!"</p>
+                <p><strong itemprop="author">Anmeldernavn 2</strong> - <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating"><span itemprop="ratingValue">5</span> ★★★★★</span></p>
+                <p itemprop="reviewBody">"Fantastisk produkt, anbefales!"</p>
             </article>
         </section>
         
-
         <section class="similar-products">
             <h2>Lignende produkter</h2>
-            <div class="similar-product">
-                <img src="https://picsum.photos/200" alt="Lignende produkt">
-                <p><strong>Produktnavn 2</strong> - 4 995 kr</p>
-            </div>
-            <div class="similar-product">
-                <img src="https://picsum.photos/200" alt="Lignende produkt">
-                <p><strong>Produktnavn 3</strong> - 3 450 kr</p>
-            </div>
+            <article class="similar-product" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Lignende produkt" itemprop="image">
+                <p><strong itemprop="name">Produktnavn 2</strong> - <span itemprop="priceCurrency" content="NOK">NOK</span> <span itemprop="price" content="4995">4 995 kr</span></p>
+            </article>
+            <article class="similar-product" itemscope itemtype="https://schema.org/Product">
+                <img src="https://picsum.photos/200" alt="Lignende produkt" itemprop="image">
+                <p><strong itemprop="name">Produktnavn 3</strong> - <span itemprop="priceCurrency" content="NOK">NOK</span> <span itemprop="price" content="3450">3 450 kr</span></p>
+            </article>
         </section>
     </main>
 
@@ -139,8 +137,8 @@
             <h3>Snarveier</h3>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="#produkter">Produkter</a></li>
-                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
                 <li><a href="#kontakt">Kontakt oss</a></li>
                 <li><a href="tilgjengelighetserklaering.pdf">Tilgjengelighetserklaering</a></li>
             </ul>
@@ -155,5 +153,6 @@
             </ul>
         </section>
     </footer>
+    <a href="#top" class="hopp-til-toppen" aria-label="Hopp til toppen">↑</a>
 </body>
 </html>

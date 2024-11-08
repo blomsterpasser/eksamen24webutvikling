@@ -43,12 +43,22 @@
                 </section>
                 <button class="next" aria-label="Neste slide">&#10095;</button>
             </section>
-            <a href="#produkter">Se våre produkter</a>
         </section>
 
         <section id="produkter" itemscope itemtype="https://schema.org/Product"> <section></section>
             <h2>Våre mest populære produkter</h2>
             <p>Utforsk våre bestselgere</p>
+            <section class="filter-buttons">
+                <button class="filter-button" itemscope itemtype="https://schema.org/Product">
+                    <span itemprop="name">New Product</span>
+                </button>
+                <button class="filter-button" itemscope itemtype="https://schema.org/Product">
+                    <span itemprop="name">Special Price</span>
+                </button>
+                <button class="filter-button" itemscope itemtype="https://schema.org/Product">
+                    <span itemprop="name">Best Sellers</span>
+                </button>
+            </section>
             <section class="product-grid">
                 <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
                     <img src="https://picsum.photos/200" alt="Produktbilde" itemprop="image">
