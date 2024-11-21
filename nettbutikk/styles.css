@@ -1,5 +1,5 @@
 body {
-    background-color: #d4d0d0; /* Mild grå som grunnfarge */
+    background-color: #fffdd0; /* Mild grå som grunnfarge */
     color: #333; /* Mørk grå for tekst, gir god lesbarhet */
     font-family: Arial, sans-serif; /* Moderne, lettleselig skrifttype */
 }
@@ -276,6 +276,7 @@ summary {
 
 form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; /* Sentrerer søkefeltet horisontalt */
     margin-top: 1rem;
 }
@@ -332,6 +333,9 @@ form button[type="reset"] {
     color: #333;
     border: 1px solid #ddd;
 }
+form .form-row {
+    flex-basis: 100%;
+}
 
 input#adresse {
     width: 450px;
@@ -376,7 +380,7 @@ section.betaling label {
 section.betaling input {
     grid-column: span 1;
     margin-left: -500px;
-    width: 100%;
+    width: 66%;
 }
 
 section.betaling form button.full-width {
@@ -398,6 +402,8 @@ section.betaling .checkbox-group {
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 section.betaling .checkbox-group label {
@@ -407,11 +413,12 @@ section.betaling .checkbox-group label {
 
 section.betaling .checkbox-group input[type="checkbox"] {
     margin-right: 0.5rem;
+    display: flex;
 }
 
 .icon {
-    width: 50px; 
-    height: 50px; 
+    width: 70px; 
+    height: 70px; 
     object-fit: contain; 
     max-width: 100%; 
     max-height: 100%; 
@@ -600,6 +607,7 @@ section.betaling .checkbox-group {
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+    flex-direction: column;
 }
 
 section.betaling .checkbox-group label {
