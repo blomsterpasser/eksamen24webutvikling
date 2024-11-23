@@ -1,6 +1,6 @@
 body {
     background-color: #fffdd0; /* Mild grå som grunnfarge */
-    color: #333; /* Mørk grå for tekst, gir god lesbarhet */
+    color: #000; /* Mørk grå for tekst, gir god lesbarhet */
     font-family: Arial, sans-serif; /* Moderne, lettleselig skrifttype */
 }
 
@@ -127,7 +127,7 @@ nav a {
 }
 
 .product-details h1 {
-    color: #333;
+    color: #000;
 }
 
 .details {
@@ -250,12 +250,14 @@ summary {
     background: #fff;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    align-content: center;
 }
 
 .review-grid article img {
     width: 20%; /* Full bredde for å matche bildene i produktseksjonen */
     height: auto;
     margin-bottom: 10px; /* Plass under bildet */
+    align-content: center;
 }
 
 .review-grid article h3 {
@@ -348,6 +350,13 @@ input#adresse {
     padding: 20px;
 }
 
+section.review-grid {
+    background-color: #fffdd0;
+}
+
+section#anmeldelser {
+    background-color: #fffdd0;
+}
 section.levering form {
     display: flex;
     flex-direction: column;
