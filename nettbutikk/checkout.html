@@ -98,32 +98,34 @@
         </section>
 
         <section class="betaling">
-            <h2>Betaling</h2>
+            <h2 class="betalingcheckout">Betaling</h2>
+            <article class="container">
             <form>
-                <label for="kortnummer">Kortnummer:</label>
+                <label id="kort" for="kortnummer">Kortnummer:</label>
                 <input type="text" id="kortnummer" name="kortnummer" pattern="\d{16}" title="Kortnummer må være 16 siffer" required aria-required="true" placeholder="34279342****4435">
-                <label for="utløpsdato">Utløpsdato:</label>
+                <label id="kort" for="utløpsdato">Utløpsdato:</label>
                 <input type="text" id="utløpsdato" name="utløpsdato" pattern="\d{2}/\d{2}" title="Utløpsdato må være i formatet MM/ÅÅ" required aria-required="true" placeholder="11/24">
-                <label for="cvc">CVC/CVV:</label>
+                <label id="kort" for="cvc">CVC/CVV:</label>
                 <input type="text" id="cvc" name="cvc" pattern="\d{3}" title="CVC/CVV må være 3 siffer" required aria-required="true" placeholder="CVC/CVV">
                 <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
                 <label id="checkboxtext">
-                    <input type="checkbox" name="vilkår" required aria-required="true">
+                    <input id="check" type="checkbox" name="nyhetsbrev" required aria-required="true">
                     Ja, jeg godtar vilkårene
                 </label>
                 <label id="checkboxtext">
-                    <input type="checkbox" name="nyhetsbrev">
+                    <input id="check" type="checkbox" name="nyhetsbrev">
                     Ja takk! Send nyhetsbrev til meg
                 </label>
                 <button type="submit" class="full-width">Fullfør kjøp</button>
-            </form>
+                </form>
+            </article>
         </section>
     </main>
 
     <footer>
         <section>
             <img src="images/nettbutikk-logo.png" alt="Logo">
-            <p>Vår nettbutikk - Kvalitet og service</p>
+            <p>Lorem ipsum dolor sit amet...</p>
         </section>
         <section id="kontakt">
             <h3>Kontakt</h3>

@@ -1,17 +1,17 @@
 body {
-    background-color: #fffdd0; /* Mild grå som grunnfarge */
-    color: #000; /* Mørk grå for tekst, gir god lesbarhet */
-    font-family: Arial, sans-serif; /* Moderne, lettleselig skrifttype */
+    background-color: #e8e4c9;
+    color: #000; 
+    font-family: Arial, sans-serif; 
 }
 
 header {
     background-color: #f8f8f8;
-    border-radius: 8px; /* Legger til runde hjørner */
+    border-radius: 8px; 
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtil skygge for å løfte headeren */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Sentrerer innholdet horisontalt */
+    align-items: center; 
 }
 
 main, footer, section {
@@ -55,8 +55,8 @@ nav a {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 20px; /* Mellomrom mellom produkter */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
 }
 
 .product-grid article {
@@ -85,33 +85,33 @@ nav a {
 
 @media (max-width: 768px) {
     .article {
-        flex: 1 1 100%; /* På små skjermer tar hver artikkel full bredde */
+        flex: 1 1 100%; 
     }
 }
 
 .product-images {
-    text-align: left; /* Sentrerer bildene */
+    text-align: left; 
     margin-top: 0px;
 }
 
 .main-image {
-    width: 100%; /* Gjør hovedbildet responsivt */
-    max-width: 600px; /* Setter maksimal bredde for hovedbildet */
-    height: auto; /* Bevarer proporsjoner */
-    display: flex; /* Sørger for at bildet vises som en blokk */
-    margin: 0 auto 20px; /* Sentrerer bildet og legger til margin under */
+    width: 100%; 
+    max-width: 600px; 
+    height: auto;
+    display: flex; 
+    margin: 0 auto 20px; 
 }
 
 .thumbnail {
-    width: 160px; /* Setter fast bredde for thumbnails */
-    height: auto; /* Bevarer proporsjoner */
-    display: inline-block; /* Viser thumbnails på samme linje */
-    margin: 0 10px; /* Legger til margin mellom thumbnails */
+    width: 160px; 
+    height: auto;
+    display: inline-block; 
+    margin: 0 10px; 
 }
 
 .thumbnail img {
-    width: 160px; /* Setter maksimal bredde for thumbnails */
-    height: auto; /* Bevarer proporsjoner */
+    width: 160px; 
+    height: auto; 
 }
 
 .product-images img {
@@ -133,7 +133,7 @@ nav a {
 .details {
     margin-top: 20px;
     display: block;
-    overflow: hidden; /* Hindrer innholdet i å flyte utenfor */
+    overflow: hidden; 
 }
 
 .details summary {
@@ -157,13 +157,16 @@ th, td {
 }
 
 details {
-    margin-bottom: 10px; /* Gir litt plass mellom hver detaljseksjon */
+    margin-bottom: 10px; 
 }
 
 summary {
     cursor: pointer;
     font-weight: bold;
-    margin-bottom: 5px; /* Litt plass under overskriften */
+    margin-bottom: 5px; 
+}
+form.input {
+    overflow: hidden;
 }
 
 @keyframes smooth {
@@ -186,10 +189,10 @@ summary {
 
 .category-item figcaption {
     position: absolute;
-    bottom: 10px; /* Juster dette etter behov */
+    bottom: 10px; 
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Delvis gjennomsiktig svart bakgrunn */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
     text-align: center;
     font-size: 16px;
@@ -199,7 +202,7 @@ summary {
 #anmeldelser {
     text-align: center;
     margin-top: 10px;
-    background: #f9f9f9; /* Lys bakgrunnsfarge for å skille seksjonen fra andre deler */
+    background: #f9f9f9; 
 }
 
 #anmeldelser h2 {
@@ -207,14 +210,14 @@ summary {
     margin-bottom: 10px;
 }
 
-#anmeldelser p {
-    margin-bottom: 20px;
+section.review-grid article {
+    max-width: 289px;
 }
 
 .reviews, .similar-products {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff; /* Lys bakgrunn for å skille anmeldelsene fra resten av innholdet */
+    background-color: #ffffff; 
     height: fit-content;
 }
 
@@ -228,22 +231,22 @@ summary {
 }
 
 .review-image {
-    float: left; /* Plasserer bildet til venstre for teksten */
-    margin-right: 10px; /* Gir litt plass mellom bildet og teksten */
-    width: 50px; /* Fast størrelse for profilbildene */
-    height: 50px; /* Fast størrelse for profilbildene */
-    border-radius: 50%; /* Gjør bildene sirkulære */
+    float: left; 
+    margin-right: 10px; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
 }
 
 .review p {
-    margin: 0; /* Fjerner standardmarg */
-    padding-top: 5px; /* Litt plass på toppen av hver paragraf */
+    margin: 0; 
+    padding-top: 5px; 
 }
 
 .review-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 20px; /* Mellomrom mellom anmeldelser */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
 }
 
 .review-grid article {
@@ -254,39 +257,39 @@ summary {
 }
 
 .review-grid article img {
-    width: 20%; /* Full bredde for å matche bildene i produktseksjonen */
+    width: 20%; 
     height: auto;
-    margin-bottom: 10px; /* Plass under bildet */
+    margin-bottom: 10px; 
     align-content: center;
 }
 
 .review-grid article h3 {
     margin: 5px 0;
-    color: #333; /* Mørkere tekstfarge for bedre lesbarhet */
+    color: #333; 
 }
 
 .review-grid article p {
     color: #555;
-    font-size: 0.9em; /* Litt mindre tekststørrelse for detaljer */
+    font-size: 0.9em; 
 }
 
 .review-grid .rating {
-    color: #f80; /* Oransje farge for stjerner */
-    font-size: 1.2em; /* Større skriftstørrelse for rating */
-    margin-bottom: 5px; /* Plass under rating før anmeldelsestekst */
+    color: #f80; 
+    font-size: 1.2em; 
+    margin-bottom: 5px; 
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Sentrerer søkefeltet horisontalt */
+    justify-content: center; 
     margin-top: 1rem;
 }
 
 form input, form button {
     padding: 0.3rem;
     border: 1px solid #ddd;
-    font-size: 16px; /* Ensartet skriftstørrelse */
+    font-size: 16px; 
 }
 
 form input {
@@ -342,20 +345,23 @@ form .form-row {
 input#adresse {
     width: 450px;
 }
+#checkboxtext {
+    margin-left: 100px;
+}
 
 .levering-info {
     display: block;
     font-size: 0.8rem;
-    color: #000000; /* Endret     farge for bedre synlighet */
+    color: #000000; 
     padding: 20px;
 }
 
 section.review-grid {
-    background-color: #fffdd0;
+    background-color: #e8e4c9;
 }
 
 section#anmeldelser {
-    background-color: #fffdd0;
+    background-color: #e8e4c9;
 }
 section.levering form {
     display: flex;
@@ -372,10 +378,23 @@ section.levering label {
 }
 
 section.levering .levering-info {
-    color: #000000; /* Endret farge for bedre synlighet */
+    color: #000000; 
     margin-top: 5px;
 }
-
+.container {
+    padding: 20px;
+    text-align: left;
+}
+.checkbox {
+    margin-right: 50%;
+}
+.betalingcheckout {
+    text-align: left;
+}
+#kort {
+    display: block;
+    max-width: 150px;
+}
 section.betaling form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -388,7 +407,6 @@ section.betaling label {
 
 section.betaling input {
     grid-column: span 1;
-    margin-left: -500px;
     width: 66%;
 }
 
@@ -422,6 +440,14 @@ section.betaling .checkbox-group label {
 
 section.betaling .checkbox-group input[type="checkbox"] {
     margin-right: 0.5rem;
+    display: flex;
+}
+
+span.levering-info {
+    text-decoration-color: #555;
+}
+
+#textbox label {
     display: flex;
 }
 
@@ -501,7 +527,7 @@ button.prev, button.next {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%; /* Runde knapper */
+    border-radius: 50%;
 }
 
 button.prev {
@@ -577,7 +603,7 @@ footer img {
     }
 }
 
-/* Spesifikke stiler for checkout-siden */
+
 .personopplysninger form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -603,17 +629,24 @@ footer img {
     flex-direction: column;
     gap: 1rem;
 }
+input#kortnummer{
+    padding-right: 20px;
+    margin-left: -85%;
+    width: 10rem;
+}
 input#utløpsdato {
-    width: 100px;
+    margin-left: -85%;
+    width: 6rem;
 }
 input#cvc {
-    width: 100px;
+    margin-left: -85%;
+    width: 6rem;
 }
 
 section.betaling .checkbox-group {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     gap: 1rem;
     margin-top: 1rem;
     flex-direction: column;
@@ -621,12 +654,9 @@ section.betaling .checkbox-group {
 
 section.betaling .checkbox-group label {
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 section.betaling .checkbox-group input[type="checkbox"] {
     margin-right: 0.5rem;
 }
-#checkboxtext input {
-    margin-left: -200px;
-} 
